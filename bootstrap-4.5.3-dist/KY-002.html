@@ -1,0 +1,71 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" content="text/html">
+  <title>KY-002</title>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body style="background-color:#fff;">
+  <div class="container">
+    <h1 style="text-align: center;">KY-002 Shock Vibration Switch Sensor</h1>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-sm-12">
+        <img src="modul-ky-002.jpg" width="200px">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <span>
+        <h2>Описание</h2>
+          Основной элемент датчика – металлическая пружина гибкой структуры, расположенная во внутренней части трубки из пластика.
+          При наличии каких-либо воздействий на нее она начинает колебаться. Усиление сигнала происходит за счет его подачи сначала на операционный усилитель,
+          а потом на выход аналогового типа. Важным элементом датчика вибрации является потенциометр, который регулирует чувствительность прибора, и позволяет устанавливать
+          необходимый порог срабатывания. Датчик вибрации имеет три выхода: • Земля; • Питание; • Выход аналогового сигнала А0. Находящийся на плате потенциометр позволяет
+          настроить его чувствительность. Он представляет собой переменный резистор c сопротивлением регулируемого типа. На плате датчика также присутствуют светодиоды,
+           которые сигнализируют о наличии питания. Кроме того, некоторые разновидности оснащаются цифровым выводом D0, который выдает логический ноль при достижении порогового
+           значения уровня вибрации.
+        </span>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h2>Схема подключения</h2>
+          <img src="modul-ky-002(2).jpg" width="50%" alt="Image not found">
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+        <h2>Код подключения</h2>
+        <div>
+          <p>
+            digitalWrite( enablePin, HIGH);<br>
+            microDelay( 210);<br>
+            if( digitalRead( outputPin))<br>
+            { <br>
+            objectDetect = false;<br>
+            } <br>
+            else<br>
+            { <br>
+            microDelay( 395);<br>
+            if( digitalRead( outputPin))<br>
+            { <br>
+            objectDetect = false;<br>
+            } <br>
+              else<br>
+            { <br>
+             objectDetect = true;<br>
+            } <br>
+            } <br>
+            digitalWrite( enablePin, LOW);<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script language="javascript" src="js/jquery-3.5.1.slim.min.js"></script>
+  <script language="javascript" src="js/popper.min.js"></script>
+  <script language="javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

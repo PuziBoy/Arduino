@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" content="text/html">
+  <title>KY-008</title>
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body style="background-color:#fff;">
+  <div class="container">
+    <h1 style="text-align: center;">KY-008 Red Laser Head Transmitter Module</h1>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-sm-12">
+        <img src="KY-008.jpg" width="200px">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <span>
+        <h2>Описание</h2>
+        Это устройство Keyes - одно из наиболее распространенных устройств в наборах датчиков Arduino.
+        В сочетании с другими компонентами его можно использовать для создания растяжек или оптических эффектов.
+        KY-008 особенно удобен, потому что он может питаться напрямую от выходного контакта Arduino,
+        поскольку он потребляет только 30 мА от процессора, который имеет выходы, рассчитанные на 40 мА.
+        </span>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <h2>Схема подключения</h2>
+          <img src="KY-008(2).png" width="50%" alt="Image not found">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+        <h2>Код подключения</h2>
+        <div>
+          <p>
+            int laserPin = 10;<br>
+            void setup ()<br>
+            {<br>
+            pinMode (laserPin, OUTPUT);<br>
+            }<br>
+            void loop ()<br>
+            {<br>
+            laserEmiter(laserPin,15,5);<br>
+            }<br>
+            void laserEmiter(int laserPin,int timeToBurn,int timeToRest)<br>
+            {<br>
+            digitalWrite (laserPin, HIGH);<br>
+            delay (timeToBurn);<br>
+            digitalWrite (laserPin, LOW);<br>
+            delay (timeToRest);<br>
+            }<br>
+            void setup ()<br>
+            {<br>
+            pinMode (laserPin, OUTPUT);<br>
+            }<br>
+            void loop ()<br>
+            {<br>
+            laserEmiter(laserPin,15,5);<br>
+            }<br>
+            void laserEmiter(int laserPin,int timeToBurn,int timeToRest)<br>
+            {<br>
+            digitalWrite (laserPin, HIGH);<br>
+            delay (timeToBurn);<br>
+            digitalWrite (laserPin, LOW);<br>
+            delay (timeToRest);<br>
+            }<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript" src="js/jquery-3.5.1.slim.min.js"></script>
+  <script language="javascript" src="js/popper.min.js"></script>
+  <script language="javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
